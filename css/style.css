@@ -1,0 +1,292 @@
+* {
+  font-family: "American Typewriter";
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #42454a;
+  border: 1px solid #42454a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  vertical-align: center;
+  background-image: url("../images/bg.webp");
+}
+
+/* section 1 */
+.text-hoa-dao {
+  font-size: 33px;
+  line-height: 49px;
+  color: #dd5410;
+  font-family: "American Typewriter";
+  text-align: center;
+}
+
+/* section 2 */
+.background2 {
+  min-height: calc(100vh - 100px);
+  max-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
+  background-color: #f1e7d1;
+}
+
+.background3 {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 600px;
+  height: 600px;
+  max-height: calc(100vh - 100px);
+  background-image: url("../images/khung.webp");
+}
+
+.image-chuc-tet {
+  width: 573px;
+  height: 383px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.text-chuc-tet {
+  font-size: 50px;
+  letter-spacing: -2px;
+  line-height: 74px;
+  color: #dd5410;
+}
+
+.text-loi-chuc-tet {
+  font-size: 30px;
+  line-height: 38px;
+  color: #000000;
+  font-family: "STIXTwoMath";
+}
+
+/* section 3 */
+.background4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  text-align: center;
+  vertical-align: center;
+  background-color: #f1e7d1;
+  background-image: url("../images/background4.png");
+}
+
+/* section 4 */
+.background5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  vertical-align: center;
+  background-color: #f1e7d1;
+}
+
+.image-bai-viet {
+  width: 285px;
+  height: 220px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.text-title-bai-viet {
+  width: 279px;
+  height: 87px;
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 37px;
+  color: #000000;
+  font-family: "STIXTwoMath";
+}
+
+/* section 5 */
+.section6 {
+  height: 100% !important;
+  min-height: 100vh;
+}
+.background6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  text-align: center;
+  vertical-align: center;
+  background-color: #f1e7d1;
+  background-image: url("../images/background6.webp");
+}
+
+.image-bai-viet-coi-nguon {
+  width: 285px;
+  height: 505px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.text-title-bai-viet {
+  width: 279px;
+  height: 87px;
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 37px;
+  color: #000000;
+  font-family: "STIXTwoMath";
+}
+
+/* section 6 */
+.background7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  text-align: center;
+  vertical-align: center;
+  background-color: #f1e7d1;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 0%) 0%,
+      rgb(255 255 255 / 60%) 100%
+    ),
+    url(../images/background4.png);
+}
+
+/* section 7 */
+.background8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  vertical-align: center;
+  background-color: #f1e7d1;
+  background-image: url("../images/background8.jpg");
+}
+
+/* section 8 */
+.background9 {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+  height: 100vh;
+  background-image: url("../images/background9.png");
+}
+
+.background10 {
+  background-color: #f1e7d1;
+  background-image: unset !important;
+}
+
+.text-chuc-tet {
+  font-size: 50px;
+  line-height: 61px;
+  color: #dd5410;
+  font-family: "American Typewriter";
+  text-align: center;
+}
+
+.text-mota {
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 35px;
+  color: #000000;
+  font-family: "STIXTwoMath";
+  text-align: center;
+}
+
+.text-content {
+  max-width: 600px;
+  height: 173px;
+  font-size: 30px;
+  line-height: 38px;
+  color: #000000;
+  text-align: left;
+}
+
+/* footer  */
+.section11 {
+  position: relative;
+  min-height: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background11 {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 225px;
+  height: 225px;
+  background-image: url("../images/footer.webp");
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+}
+.text-footer {
+  font-size: 28px;
+  line-height: 38px;
+  color: #f2e7d1;
+  /* font-weight: 00; */
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "American Typewriter";
+    src: url('../fonts/AmericanTypewriter.ttc');
+}
+
+@font-face {
+    font-family: "STIXTwoMath";
+    src: url('../fonts/STIXTwoMath.otf');
+}
