@@ -24,8 +24,9 @@
 
   .image-chuc-tet {
     width: 80%;
-    height: unset;
+    height: 275px;
     margin: 0 auto;
+    overflow: hidden;
   }
 
   .text-chuc-tet {
@@ -93,10 +94,10 @@
   }
 
   .image-bai-viet-coi-nguon {
-    width: 350px;
+    width: 285px;
   }
   .image-bai-viet-coi-nguon video {
-    width: 350px;
+    width: 285px;
     height: 505px;
   }
 

@@ -26,7 +26,7 @@ $(window).on('load', function () {
         }
         if (scrollTop > $(window).height() && loading) {
             $('#loading').css({ display: 'none' })
-            loading = false;
+            loading = true;
             AOS.refresh();
         }
         
