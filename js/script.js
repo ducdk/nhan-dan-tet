@@ -1,6 +1,7 @@
 AOS.init();
 
 let loading = false;
+let state = true;
 
 function clickStart() {
     console.log('Click');
@@ -24,9 +25,9 @@ $(window).on('load', function () {
             }, 100);
             return;
         }
-        if (scrollTop > $(window).height() && loading) {
+        if (scrollTop > $(window).height() && state) {
             $('#loading').css({ display: 'none' })
-            loading = true;
+            state = false
             AOS.refresh();
         }
         
