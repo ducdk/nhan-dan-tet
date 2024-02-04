@@ -5,10 +5,10 @@ let loading = false;
 function clickStart() {
     console.log('Click');
     // $('#loading').hide();
+    loading = true;
     $('html, body').animate({
         scrollTop: $(".section-start").offset().top
     }, 500);
-    loading = true;
 };
 $(window).on('load', function () {
     console.log('Loaded');
@@ -18,11 +18,18 @@ $(window).on('load', function () {
 
     $(document).on('scroll', function () {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > 0 && !loading) {
+            $('html, body').animate({
+                scrollTop: $("#body").offset().top
+            }, 100);
+            return;
+        }
         if (scrollTop > $(window).height() && loading) {
             $('#loading').css({ display: 'none' })
             loading = false;
             AOS.refresh();
         }
+        
     });
 
     if ($(window).width() <= 768) {
