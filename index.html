@@ -9,11 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" />
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reponsive.css">
 </head>
 
 <body>
@@ -21,21 +23,21 @@
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="body">
+    <div class="body" id="body">
 
-        <div class="section">
+        <div class="section" id="loading" onclick="clickStart()">
             <div class="background">
                 <div class="container mx-auto flex flex-col items-center justify-center w-full">
                     <div class="flex items-center justify-between w-full">
-                        <div class="">
+                        <div class="img-1">
                             <img src="./images/nhandan.webp" alt="Nhân Dân" srcset="">
                         </div>
-                        <div class="">
+                        <div class="img-2">
                             <img src="./images/denlong.webp" alt="Đèn Lồng" srcset="">
                         </div>
                     </div>
                     <div class="flex flex-col items-center justify-between w-full">
-                        <div class="max-w-[300px]">
+                        <div class="max-w-[300px] img-3">
                             <img src="./images/gift/hoadao.gif" alt="Hoa đào" srcset="">
                         </div>
                         <div class="text-hoa-dao">
@@ -49,50 +51,61 @@
                 <div class="absolute bottom-0 left-0 w-full max-h-[65px]">
                     <img src="./images/nenrong.png" alt="Nhân Dân" srcset="">
                 </div>
+                <div class="absolute top-0 left-0 w-full max-h-[65px]" style="transform: rotate(180deg);">
+                    <img src="./images/nenrong.png" alt="Nhân Dân" srcset="">
+                </div>
             </div>
 
         </div>
 
-        <div class="section">
+        <div class="section section-start">
             <div class="background overflow-hidden">
-                <div class="flex items-center justify-center w-full mx-auto relative max-h-[100px]">
+                <div class="flex items-center justify-center w-full mx-auto relative min-h-[100px] max-h-[100px]">
                     <div class="w-full">
-                        <img src="./images/menutop.png" alt="Nhân Dân" srcset="">
+                        <img src="./images/menutop.png" alt="Nhân Dân" srcset=""
+                            class="max-h-[100px] min-h-[100px] w-full">
                     </div>
                     <div class="absolute container h-full flex items-center justify-between w-full">
                         <div class="cursor-pointer max-w-[50px]">
-                            <img src="./images/icon-sound-on.png" alt="Nhân Dân" srcset="">
+                            <img src="./images/icon-sound-on.png" alt="Nhân Dân" srcset="" class="img-4">
                         </div>
                         <div class="flex gap-[8px]">
-                            <img src="./images/nhandan.webp" alt="Nhân Dân" srcset="">
-                            <img src="./images/icon-menu.png" class="max-w-[50px] cursor-pointer" alt="Menu Nhân Dân"
-                                srcset="">
+                            <img src="./images/nhandan.webp" alt="Nhân Dân" srcset="" class="img-1">
+                            <img src="./images/icon-menu.png" class="max-w-[50px] cursor-pointer img-4"
+                                alt="Menu Nhân Dân" srcset="">
                         </div>
                     </div>
                 </div>
                 <div class="flex items-center justify-center w-full mx-auto background2">
                     <div class="container relative flex items-center justify-center w-full background3">
-                        <div class="absolute max-w-[450px] top-0 -left-[200px]">
-                            <img src="./images/hoadao.webp" alt="Hoa đào" srcset="">
+                        <div
+                            class="absolute max-w-[300px] md:max-w-[450px] top-[-75px] md:top-0 -left-[50px] md:-left-[200px]">
+                            <img src="./images/hoadao.webp" alt="Hoa đào" srcset="" data-aos="fade-up"
+                                data-aos-delay="100">
                         </div>
-                        <div class="absolute max-w-[550px] bottom-0 -left-[120px]">
+                        <div class="absolute max-w-[550px] bottom-0 -left-[120px]" data-aos="fade-right"
+                            data-aos-delay="200">
                             <img src="./images/may1.webp" alt="Hoa đào" srcset="">
                         </div>
-                        <div class="absolute max-w-[550px] bottom-0 -right-[300px]">
+                        <div class="absolute max-w-[550px] bottom-0 -right-[300px]" data-aos="fade-left"
+                            data-aos-delay="300">
                             <img src="./images/may2.webp" alt="Hoa đào" srcset="">
                         </div>
-                        <div class="absolute max-w-[550px] -top-[100px] right-[100px]">
+                        <div class="absolute max-w-[550px] -top-[100px] right-[100px]" data-aos="zoom-in"
+                            data-aos-delay="400">
                             <img src="./images/gift/fireworks.gif" alt="Hoa đào" srcset="">
                         </div>
-                        <div class="flex gap-[36px]">
-                            <div class="image-chuc-tet">
+                        <div class="flex-col md:flex-row gap-[36px] flex">
+                            <div class="image-chuc-tet" data-aos="zoom-in">
+                                <img src="./images/imagechange/anhloichuc.webp" alt="Lời chúc" srcset="">
                             </div>
                             <div class="flex flex-col text-left">
-                                <div class="text-chuc-tet">
+                                <div class="text-chuc-tet text-center md:text-left" data-aos="zoom-in"
+                                    data-aos-delay="300">
                                     Lời chúc tết của <br />
                                     Tổng bí thư Nguyễn Phú Trọng
                                 </div>
-                                <div class="text-loi-chuc-tet max-w-[600px]">
+                                <div class="text-loi-chuc-tet max-w-[600px]" data-aos="zoom-in" data-aos-delay="400">
                                     Lorem ipsum dolor sit amet, consec tetuer adi piscing elit, sed dLorem ipsum dolor
                                     sit amet, consectetuer adipiscing elit, sed dLorem ipsum dolor sit amet,
                                     consectetuer adipiscing elit, sed dLorem ipsum dolor sit amet, consectetuer
@@ -109,13 +122,16 @@
             <div class="background4 overflow-hidden relative">
                 <div class="flex items-center justify-center w-full h-full mx-auto">
                     <div class="container relative flex items-center justify-center h-full w-full">
-                        <div class="absolute max-w-[500px] top-[30%] left-0">
+                        <div class="absolute max-w-[80%] md:max-w-[500px] top-[15%] md:top-[30%] left-[10%] md:left-0"
+                            data-aos="fade-up" data-aos-delay="100">
                             <img src="./images/nguoidixaytet.png" alt="Hoa đào" srcset="">
                         </div>
-                        <div class="absolute min-w-[500px] w-[70%] bottom-0 right-0">
+                        <div class="absolute min-w-[100%] md:min-w-[500px] w-[100%] md:w-[70%] bottom-0 right-0"
+                            data-aos="fade-up" data-aos-delay="500">
                             <img src="./images/nguoi-1.png" alt="Hoa đào" srcset="">
                         </div>
-                        <div class="absolute max-w-[550px] top-[100px] right-[100px]">
+                        <div class="absolute max-w-[80%] md:max-w-[550px] top-[35%] md:top-[100px] right-[10%] md:right-[100px]"
+                            data-aos="fade-up" data-aos-delay="750">
                             <img src="./images/gift/fireworks.gif" alt="Hoa đào" srcset="">
                         </div>
                     </div>
@@ -126,7 +142,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section section5">
             <div class="background5 overflow-hidden relative">
                 <div class="flex items-center justify-center w-full h-full mx-auto">
                     <div class="container relative flex flex-col justify-center gap-[16px] w-full">
@@ -139,77 +155,87 @@
                         <div class="absolute max-w-[550px] bottom-[150px] right-[75px]">
                             <img src="./images/may2.webp" alt="Hoa đào" srcset="">
                         </div>
-                        <div class="danh-sach-bai-viet flex gap-[16px]">
-                            <div class="flex flex-col gap-[16px]">
-                                <div class="image-bai-viet">
+                        <div class="danh-sach-bai-viet flex flex-col md:flex-row gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="100">
+                                <div class="image-bai-viet active">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="200">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="300">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="400">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="500">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
                         </div>
-                        <div class="">
+                        <div class="" data-aos="fade-up" data-aos-delay="200">
                             <img src="./images/dubao.webp" alt="Nhân Dân" srcset="">
                         </div>
-                        <div class="danh-sach-bai-viet flex gap-[16px]">
-                            <div class="flex flex-col gap-[16px]">
-                                <div class="image-bai-viet">
+                        <div class="danh-sach-bai-viet flex flex-col md:flex-row gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="100">
+                                <div class="image-bai-viet active">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="200">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="300">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="400">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="500">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
@@ -223,91 +249,168 @@
 
         <div class="section section6">
             <div class="background6 overflow-hidden relative pb-[50px]">
-                <div class="absolute max-w-[550px] -top-[290px] left-[125px] opacity-50">
+                <div class="absolute max-w-[80%] md:max-w-[550px] top-[-100px] md:-top-[290px] left-[125px] opacity-50"
+                    data-aos="fade-up" data-aos-delay="100">
                     <img src="./images/may1.webp" alt="Hoa đào" srcset="">
                 </div>
-                <div class="absolute max-w-[550px] -top-[290px] -right-[90px] opacity-50">
+                <div class="absolute max-w-[80%] md:max-w-[550px] md:-top-[290px] -right-[90px] opacity-50"
+                    data-aos="fade-up" data-aos-delay="200">
                     <img src="./images/may2.webp" alt="Hoa đào" srcset="">
                 </div>
-                <div class="absolute max-w-[450px] top-0 left-0">
+                <div class="absolute max-w-[450px] top-[-50px] md:top-0 left-[-100px] md:left-0" data-aos="fade-up"
+                    data-aos-delay="300">
                     <img src="./images/hoadao.webp" alt="Hoa đào" srcset="">
                 </div>
-                <div class="absolute max-w-[550px] top-[-60px] right-[10%]">
+                <div class="absolute max-w-[550px] top-[-60px] right-0 md:right-[10%]" data-aos="fade-up"
+                    data-aos-delay="400">
                     <img src="./images/denlong.webp" alt="Đèn Lồng" srcset="">
                 </div>
                 <div class="flex items-center justify-center w-full h-full mx-auto">
                     <div class="container relative flex flex-col items-center justify-center gap-[16px] h-full w-full">
-                        <div class="my-[50px]">
+                        <div class="my-[50px]" data-aos="fade-up" data-aos-delay="100">
                             <img src="./images/trove.webp" alt="Nhân Dân" srcset="">
                         </div>
-                        <div class="danh-sach-bai-viet flex gap-[16px]">
-                            <div class="flex flex-col gap-[16px]">
+                        <div class="danh-sach-bai-viet flex gap-[16px] video1">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="100">
                                 <div class="image-bai-viet-coi-nguon">
+                                    <video controls>
+                                        <source src="./images/video.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.
+                                    </video>
                                 </div>
                                 <div class="text-title-bai-viet text-center">
                                     Bày cỗ tết
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="200">
                                 <div class="image-bai-viet-coi-nguon">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-center">
                                     Cắm đào
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="300">
                                 <div class="image-bai-viet-coi-nguon">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-center">
                                     Tỉa củ thủy tiên
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="400">
                                 <div class="image-bai-viet-coi-nguon">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-center">
                                     Gói bánh chưng
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="500">
                                 <div class="image-bai-viet-coi-nguon">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-center">
                                     Đi chùa đầu năm
                                 </div>
                             </div>
                         </div>
-                        <div class="danh-sach-bai-viet flex gap-[16px]">
-                            <div class="flex flex-col gap-[16px]">
-                                <div class="image-bai-viet">
+                        <div class="swiper video2">
+                            <div class="danh-sach-bai-viet flex swiper-wrapper">
+                                <div class="flex flex-col gap-[16px] swiper-slide">
+                                    <div class="image-bai-viet-coi-nguon">
+                                        <video controls>
+                                            <source src="./images/video.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                    </div>
+                                    <div class="text-title-bai-viet text-center">
+                                        Bày cỗ tết
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-[16px] swiper-slide">
+                                    <div class="image-bai-viet-coi-nguon">
+                                        <video controls>
+                                            <source src="./images/video.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                    </div>
+                                    <div class="text-title-bai-viet text-center">
+                                        Cắm đào
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-[16px] swiper-slide">
+                                    <div class="image-bai-viet-coi-nguon">
+                                        <video controls>
+                                            <source src="./images/video.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                    </div>
+                                    <div class="text-title-bai-viet text-center">
+                                        Tỉa củ thủy tiên
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-[16px] swiper-slide">
+                                    <div class="image-bai-viet-coi-nguon">
+                                        <video controls>
+                                            <source src="./images/video.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                    </div>
+                                    <div class="text-title-bai-viet text-center">
+                                        Gói bánh chưng
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-[16px] swiper-slide">
+                                    <div class="image-bai-viet-coi-nguon">
+                                        <video controls>
+                                            <source src="./images/video.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                    </div>
+                                    <div class="text-title-bai-viet text-center">
+                                        Đi chùa đầu năm
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="danh-sach-bai-viet flex flex-col md:flex-row gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="100">
+                                <div class="image-bai-viet active">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="200">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="300">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="400">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-[16px]">
+                            <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="500">
                                 <div class="image-bai-viet">
+                                    <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                 </div>
                                 <div class="text-title-bai-viet text-left">
                                     Tít bài: dành khoảng hai dòng cho các tít bài dài
@@ -319,48 +422,51 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section section7">
             <div class="background7 overflow-hidden relative">
                 <div class="flex items-center justify-center w-full h-full mx-auto">
-                    <div class="container relative flex items-center justify-center h-full w-full">
-                        <div class="absolute min-w-[500px] w-[50%] bottom-0 left-0">
-                            <img src="./images/nguoi-1.png" alt="Hoa đào" srcset="">
-                        </div>
-                        <div class="absolute max-w-[550px] top-[200px] left-[50px]">
+                    <div class="container relative flex flex-col md:flex-row items-center justify-center h-full w-full">
+                        <div class="absolute max-w-[550px] top-[200px] left-[50px]" data-aos="fade-up"
+                            data-aos-delay="200">
                             <img src="./images/gift/fireworks.gif" alt="Hoa đào" srcset="">
                         </div>
                         <div class="flex items-center justify-center w-full">
-                            <div class="flex-1"></div>
-                            <div class="flex-1">
-                                <div class="my-[50px]">
+                            <div class="flex-1 custom"></div>
+                            <div class="flex-1 w-full">
+                                <div class="my-[50px] w-[100%] m-auto md:w-full" data-aos="fade-up"
+                                    data-aos-delay="300">
                                     <img src="./images/uocvong.webp" alt="Nhân Dân" srcset="">
                                 </div>
-                                <div class="danh-sach-bai-viet flex gap-[16px]">
-                                    <div class="flex flex-col gap-[16px]">
-                                        <div class="image-bai-viet">
+                                <div class="danh-sach-bai-viet flex flex-col md:flex-row gap-[16px]">
+                                    <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="400">
+                                        <div class="image-bai-viet active">
+                                            <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                         </div>
                                         <div class="text-title-bai-viet text-center">
                                             Tít bài: dành khoảng hai dòng cho các tít bài dài
                                         </div>
                                     </div>
-                                    <div class="flex flex-col gap-[16px]">
+                                    <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="500">
                                         <div class="image-bai-viet">
+                                            <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                         </div>
                                         <div class="text-title-bai-viet text-center">
                                             Tít bài: dành khoảng hai dòng cho các tít bài dài
                                         </div>
                                     </div>
                                 </div>
-                                <div class="danh-sach-bai-viet flex gap-[16px]">
-                                    <div class="flex flex-col gap-[16px]">
-                                        <div class="image-bai-viet">
+                                <div class="danh-sach-bai-viet flex flex-col md:flex-row gap-[16px]">
+                                    <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="600">
+                                        <div class="image-bai-viet active">
+                                            <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                         </div>
                                         <div class="text-title-bai-viet text-center">
                                             Tít bài: dành khoảng hai dòng cho các tít bài dài
                                         </div>
                                     </div>
-                                    <div class="flex flex-col gap-[16px]">
+                                    <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="700">
                                         <div class="image-bai-viet">
+                                            <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                         </div>
                                         <div class="text-title-bai-viet text-center">
                                             Tít bài: dành khoảng hai dòng cho các tít bài dài
@@ -368,6 +474,10 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="relative md:absolute min-w-[100%] md:min-w-[500px] w-[100%] md:w-[50%] bottom-0 left-0"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <img src="./images/nguoi-1.png" alt="Hoa đào" srcset="">
                         </div>
                     </div>
                 </div>
@@ -380,46 +490,53 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section section8">
             <div class="background5 overflow-hidden relative">
                 <div class="flex items-center justify-center w-full h-full mx-auto">
-                    <div class="container relative flex items-center justify-center h-full w-full gap-[8px]">
+                    <div
+                        class="container relative flex flex-col md:flex-row items-center justify-center h-full w-full gap-[8px]">
                         <div class="flex-1 flex flex-col items-center justify-center relative">
-                            <div class="absolute max-w-[550px] bottom-0 -left-[50px] z-[-1]">
+                            <div class="absolute max-w-[550px] bottom-0 -left-[50px] z-[-1]" data-aos="fade-up"
+                                data-aos-delay="100">
                                 <img src="./images/may1.webp" alt="Hoa đào" srcset="">
                             </div>
-                            <div class="absolute max-w-[550px] -top-[200px] left-[75px] z-[-1]">
+                            <div class="absolute max-w-[550px] -top-[200px] left-[75px] z-[-1]" data-aos="fade-up"
+                                data-aos-delay="200">
                                 <img src="./images/may2.webp" alt="Hoa đào" srcset="">
                             </div>
-                            <div class="my-[50px]">
+                            <div class="my-[50px]" data-aos="fade-up" data-aos-delay="300">
                                 <img src="./images/rongvanhoa.webp" alt="Nhân Dân" srcset="">
                             </div>
-                            <div class="danh-sach-bai-viet flex gap-[16px]">
-                                <div class="flex flex-col gap-[16px]">
-                                    <div class="image-bai-viet">
+                            <div class="danh-sach-bai-viet flex flex-col md:flex-row gap-[16px]">
+                                <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="image-bai-viet active">
+                                        <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                     </div>
                                     <div class="text-title-bai-viet text-center">
                                         Tít bài: dành khoảng hai dòng cho các tít bài dài
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-[16px]">
+                                <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="500">
                                     <div class="image-bai-viet">
+                                        <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                     </div>
                                     <div class="text-title-bai-viet text-center">
                                         Tít bài: dành khoảng hai dòng cho các tít bài dài
                                     </div>
                                 </div>
                             </div>
-                            <div class="danh-sach-bai-viet flex gap-[16px]">
-                                <div class="flex flex-col gap-[16px]">
+                            <div class="danh-sach-bai-viet flex flex-col md:flex-row gap-[16px] mt-[16px] md:mt-0">
+                                <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="600">
                                     <div class="image-bai-viet">
+                                        <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                     </div>
                                     <div class="text-title-bai-viet text-center">
                                         Tít bài: dành khoảng hai dòng cho các tít bài dài
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-[16px]">
+                                <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="700">
                                     <div class="image-bai-viet">
+                                        <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                     </div>
                                     <div class="text-title-bai-viet text-center">
                                         Tít bài: dành khoảng hai dòng cho các tít bài dài
@@ -428,49 +545,58 @@
                             </div>
                         </div>
                         <div class="h-full">
-                            <div class="">
+                            <div class="ishow">
                                 <img src="./images/denlong.webp" alt="Đèn Lồng" srcset="">
                             </div>
-                            <div class="">
+                            <div class="ishow">
                                 <img src="./images/hoadaobc.webp" alt="Đèn Lồng" srcset="">
+                            </div>
+                            <div class="ishow2">
+                                <img src="./images/hoadao2.webp" alt="Đèn Lồng" srcset="">
                             </div>
                         </div>
                         <div class="flex-1 flex flex-col items-center justify-center relative">
-                            <div class="absolute max-w-[550px] bottom-0 -left-[120px] z-[-1]">
+                            <div class="absolute max-w-[550px] bottom-0 -left-[120px] z-[-1]" data-aos="fade-up"
+                                data-aos-delay="100">
                                 <img src="./images/may1.webp" alt="Hoa đào" srcset="">
                             </div>
-                            <div class="absolute max-w-[550px] -top-[240px] -left-[50px] z-[-1]">
+                            <div class="absolute max-w-[550px] -top-[240px] -left-[50px] z-[-1]" data-aos="fade-up"
+                                data-aos-delay="200">
                                 <img src="./images/may2.webp" alt="Hoa đào" srcset="">
                             </div>
-                            <div class="my-[50px]">
+                            <div class="my-[50px]" data-aos="fade-up" data-aos-delay="300">
                                 <img src="./images/tetbonphuong.webp" alt="Nhân Dân" srcset="">
                             </div>
-                            <div class="danh-sach-bai-viet flex gap-[16px]">
-                                <div class="flex flex-col gap-[16px]">
+                            <div class="danh-sach-bai-viet flex flex-col md:flex-row gap-[16px] mt-[16px] md:mt-0">
+                                <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="400">
                                     <div class="image-bai-viet">
+                                        <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                     </div>
                                     <div class="text-title-bai-viet text-center">
                                         Tít bài: dành khoảng hai dòng cho các tít bài dài
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-[16px]">
+                                <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="500">
                                     <div class="image-bai-viet">
+                                        <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                     </div>
                                     <div class="text-title-bai-viet text-center">
                                         Tít bài: dành khoảng hai dòng cho các tít bài dài
                                     </div>
                                 </div>
                             </div>
-                            <div class="danh-sach-bai-viet flex gap-[16px]">
-                                <div class="flex flex-col gap-[16px]">
-                                    <div class="image-bai-viet">
+                            <div class="danh-sach-bai-viet flex flex-col md:flex-row gap-[16px]">
+                                <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="600">
+                                    <div class="image-bai-viet active">
+                                        <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                     </div>
                                     <div class="text-title-bai-viet text-center">
                                         Tít bài: dành khoảng hai dòng cho các tít bài dài
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-[16px]">
+                                <div class="flex flex-col gap-[16px]" data-aos="fade-up" data-aos-delay="700">
                                     <div class="image-bai-viet">
+                                        <img src="./images/imagechange/baiviet.webp" alt="" srcset="">
                                     </div>
                                     <div class="text-title-bai-viet text-center">
                                         Tít bài: dành khoảng hai dòng cho các tít bài dài
@@ -483,61 +609,57 @@
             </div>
         </div>
 
-
-        <div class="section">
+        <div class="section section10">
             <div class="background overflow-hidden background10">
-                <div class="flex items-center justify-center w-full mx-auto">
-                    <div class="container relative flex items-center justify-center w-full background9">
-                        <div class="absolute max-w-[550px] bottom-0 -left-[120px] z-[-1]">
-                            <img src="./images/may1.webp" alt="Hoa đào" srcset="">
-                        </div>
-                        <div class="absolute max-w-[550px] bottom-0 -right-[300px] z-[-1]">
-                            <img src="./images/may2.webp" alt="Hoa đào" srcset="">
-                        </div>
-                        <div class="flex flex-col gap-[36px] items-center justify-center w-full">
-                            <div class="flex gap-[16px]">
-                                <div
-                                    class="flex flex-col gap-2 items-center justify-center min-w-[400px] max-w-[500px]">
-                                    <div class="text-chuc-tet">
-                                        Chụp ảnh Tết!
-                                    </div>
-                                    <div class="max-w-[200px]">
-                                        <img src="./images/qr.webp" alt="Hoa đào" srcset="">
-                                    </div>
-                                    <div class="text-mota">
-                                        Quét mã QR để chụp ảnh <br /> cùng Báo Nhân Dân
-                                    </div>
+                <div class="container relative flex items-center justify-center w-full background9">
+                    <div class="absolute max-w-[550px] bottom-0 -left-[120px] z-[-1]">
+                        <img src="./images/may1.webp" alt="Hoa đào" srcset="">
+                    </div>
+                    <div class="absolute max-w-[550px] bottom-0 -right-[300px] z-[-1]">
+                        <img src="./images/may2.webp" alt="Hoa đào" srcset="">
+                    </div>
+                    <div class="flex flex-col gap-[36px] items-center justify-center w-full">
+                        <div class="flex gap-[16px] flex-col md:flex-row ">
+                            <div class="flex flex-col gap-2 items-center justify-center min-w-[400px] max-w-[500px]">
+                                <div class="text-chuc-tet qr">
+                                    Chụp ảnh Tết!
                                 </div>
-                                <div class="flex gap-4">
-                                    <div class="">
-                                        <img src="./images/lixi.webp" alt="Hoa đào" srcset="">
-                                    </div>
-                                    <div class="">
-                                        <img src="./images/lixi.webp" alt="Hoa đào" srcset="">
-                                    </div>
-                                    <div class="">
-                                        <img src="./images/lixi.webp" alt="Hoa đào" srcset="">
-                                    </div>
+                                <div class="max-w-[100px] md:max-w-[200px]">
+                                    <img src="./images/qrfilter.png" alt="Hoa đào" srcset="">
+                                </div>
+                                <div class="text-mota">
+                                    Quét mã QR để chụp ảnh <br /> cùng Báo Nhân Dân
                                 </div>
                             </div>
-                            <div class="flex gap-[16px]">
-                                <div
-                                    class="flex flex-col gap-2 items-center justify-center min-w-[400px] max-w-[500px]">
-                                    <div class="text-chuc-tet">
-                                        Lời chúc Tết!
-                                    </div>
-                                    <div class="max-w-[200px]">
-                                        <img src="./images/qr.webp" alt="Hoa đào" srcset="">
-                                    </div>
-                                    <div class="text-mota">
-                                        Quét mã để trải nghiệm<br /> lời chúc với AR
-                                    </div>
+                            <div class="flex gap-4 items-center justify-center">
+                                <div class="img-5" style="transform: rotate(3deg);">
+                                    <img src="./images/lixi.webp" alt="Hoa đào" srcset="">
                                 </div>
-                                <div class="flex items-center justify-center flex-1">
-                                    <div class="text-content">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed d Lorem ipsum
-                                        dolor sit amet, consectetuer adipiscing elit, sed d
-                                    </div>
+                                <div class="img-5" style="transform: rotate(0deg);">
+                                    <img src="./images/lixi.webp" alt="Hoa đào" srcset="">
+                                </div>
+                                <div class="img-5" style="transform: rotate(-3deg);">
+                                    <img src="./images/lixi.webp" alt="Hoa đào" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[90%] m-auto h-[2px]" style="background: white;"></div>
+                        <div class="flex gap-[16px] flex-col md:flex-row ">
+                            <div class="flex flex-col gap-2 items-center justify-center min-w-[400px] max-w-[500px]">
+                                <div class="text-chuc-tet qr">
+                                    Lời chúc Tết!
+                                </div>
+                                <div class="max-w-[100px] md:max-w-[200px]">
+                                    <img src="./images/qrthiep.png" alt="Hoa đào" srcset="">
+                                </div>
+                                <div class="text-mota">
+                                    Quét mã để trải nghiệm<br /> lời chúc với AR
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center flex-1">
+                                <div class="text-content">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed d Lorem ipsum
+                                    dolor sit amet, consectetuer adipiscing elit, sed d
                                 </div>
                             </div>
                         </div>
@@ -548,8 +670,8 @@
 
         <div class="section11">
             <div class="w-full overflow-hidden background11">
-                <div class="flex items-center justify-center w-full h-full mx-auto">
-                    <div class="container relative flex items-center justify-center w-full h-full gap-[36px] mt-[16px]">
+                <div class="flex items-center justify-center w-full h-full mx-auto  mb-[20px]">
+                    <div class="container relative flex flex-col md:flex-row w-full h-full gap-[16px] md:gap-[36px] mt-[16px]">
                         <div class="flex flex-col gap-2">
                             <div class="text-footer">
                                 Chỉ đạo sản xuất: Hồng Minh - Hồng Vân
@@ -585,12 +707,20 @@
     </div>
 
 
-
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <!-- end gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+
     <script src="js/script.js" async defer></script>
+    <script src="js/animation.js" async defer></script>
 </body>
 
 </html>

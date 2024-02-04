@@ -22,12 +22,32 @@ body {
   padding: 0;
 }
 
+#loading {
+  /* position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  cursor: pointer; */
+}
+
+.section0 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .section {
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.section-start {
+  /* padding-top: 100vh; */
 }
 
 .background {
@@ -77,6 +97,12 @@ body {
   height: 383px;
   border-radius: 10px;
   background-color: #ffffff;
+}
+
+.image-chuc-tet img {
+  width: 573px;
+  height: 383px;
+  border-radius: 10px;
 }
 
 .text-chuc-tet {
@@ -156,7 +182,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 10;
   background-size: cover;
   background-position: center;
   /* background-attachment: fixed; */
@@ -172,6 +198,19 @@ body {
   height: 505px;
   border-radius: 10px;
   background-color: #ffffff;
+}
+
+.video1 {
+  display: flex!important;
+}
+.video2 {
+  display: none!important;
+}
+.ishow {
+  display: block!important;
+}
+.ishow2 {
+  display: none!important;
 }
 
 .text-title-bai-viet {
@@ -268,8 +307,8 @@ body {
 /* footer  */
 .section11 {
   position: relative;
-  min-height: 200px;
-  height: 200px;
+  min-height: 200px!important;
+  height: 200px!important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,7 +317,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height: 225px;
-  height: 225px;
+  /* height: 225px; */
   background-image: url("../images/footer.webp");
   background-size: cover;
   background-position: center;

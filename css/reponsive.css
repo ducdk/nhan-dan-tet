@@ -1,0 +1,162 @@
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .img-1 {
+    width: 100px;
+  }
+  .img-2 {
+    width: 132px;
+  }
+
+  .img-3 {
+    width: 200px;
+  }
+  .img-4 {
+    width: 36px;
+  }
+
+  .text-hoa-dao {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .image-chuc-tet {
+    width: 80%;
+    height: unset;
+    margin: 0 auto;
+  }
+
+  .text-chuc-tet {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .text-loi-chuc-tet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .background3 {
+    background-image: url(../images/khung3.webp);
+    margin: 16px;
+  }
+
+  .image-bai-viet {
+    display: none;
+  }
+
+  .image-bai-viet.active {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    height: auto;
+  }
+
+  .text-title-bai-viet {
+    width: 100%;
+    height: unset;
+  }
+
+  .section5 {
+    min-height: 100vh;
+    height: 100%;
+  }
+  .section6 {
+    min-height: 100vh;
+    height: 100%;
+  }
+  .section7 {
+    min-height: 100vh;
+    height: 100%;
+  }
+  .section8 {
+    min-height: 100vh;
+    height: 100%;
+  }
+  .section10 {
+    min-height: 100vh;
+    height: 100%;
+  }
+  .background5 {
+    padding: 36px 0;
+  }
+
+  .background6 {
+    padding: 100px 0;
+  }
+
+  .background10 {
+    /* padding: 100px 0; */
+  }
+
+  .image-bai-viet-coi-nguon {
+    width: 350px;
+  }
+  .image-bai-viet-coi-nguon video {
+    width: 350px;
+    height: 505px;
+  }
+
+  .video1 {
+    display: none!important;
+  }
+  .video2 {
+    display: block!important;
+  }
+
+  .swiper {
+    width: 350px;
+  }
+
+  .custom {
+    display: none
+  }
+
+  .image-bai-viet.uv {
+    display: flex!important;
+  }
+  .ishow {
+    display: none!important;
+  }
+  .ishow2 {
+    display: flex!important;
+  }
+  .text-content {
+    font-size: 18px;
+    line-height: 24px;
+    height: unset;
+    width: 90%;
+  }
+
+  .text-chuc-tet.qr {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .text-mota {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .img-5 {
+    width: 100px;
+  }
+
+  .text-footer {
+    font-size: 16px;
+    line-height: 20px;
+    color: #f2e7d1;
+    /* font-weight: 00; */
+  }
+
+  .section11 {
+    position: relative;
+    min-height: 250px!important;
+    height: 250px!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+}
