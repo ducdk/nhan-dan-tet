@@ -193,3 +193,37 @@
     background-image: url("../images/bg9mobile.jpg");
   }
 }
+
+@media only screen and (max-width: 1369px) { 
+  .text-chuc-tet {
+    font-size: 40px;
+    line-height: 61px;
+    color: #dd5410;
+    font-family: "American Typewriter";
+    text-align: center;
+  }
+
+  .text-loi-chuc-tet {
+    font-size: 26px;
+    line-height: 38px;
+    color: #000000;
+    font-family: "STIXTwoMath";
+}
+}
+
+@media only screen and (max-width: 1024px) { 
+  .text-chuc-tet {
+    font-size: 26px;
+    line-height: 38px;
+    color: #dd5410;
+    font-family: "American Typewriter";
+    text-align: center;
+  }
+
+  .text-loi-chuc-tet {
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+    font-family: "STIXTwoMath";
+}
+}
