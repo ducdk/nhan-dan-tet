@@ -119,15 +119,15 @@ body {
 }
 
 .text-chuc-tet {
-  font-size: 50px;
+  font-size: 48px;
   letter-spacing: -2px;
-  line-height: 74px;
+  line-height: 70px;
   color: #dd5410;
 }
 
 .text-loi-chuc-tet {
-  font-size: 30px;
-  line-height: 38px;
+  font-size: 28px;
+  line-height: 32px;
   color: #000000;
   font-family: "STIXTwoMath";
 }
@@ -299,7 +299,7 @@ body {
 .text-content {
   max-width: 600px;
   height: 173px;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 38px;
   color: #000000;
   text-align: left;
@@ -325,8 +325,8 @@ body {
   /* background-attachment: fixed; */
 }
 .text-footer {
-  font-size: 28px;
-  line-height: 38px;
+  font-size: 26px;
+  line-height: 32px;
   color: #f2e7d1;
   /* font-weight: 00; */
 }
