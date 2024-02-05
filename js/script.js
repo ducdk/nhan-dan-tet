@@ -5,11 +5,12 @@ let state = true;
 
 function clickStart() {
     console.log('Click');
-    // $('#loading').hide();
+    $('#loading').hide();
     loading = true;
     $('html, body').animate({
         scrollTop: $(".section-start").offset().top
     }, 500);
+    AOS.refresh();
 };
 $(window).on('load', function () {
     console.log('Loaded');
@@ -17,21 +18,20 @@ $(window).on('load', function () {
     //     scrollTop: $("#body").offset().top
     // }, 1000);
 
-    $(document).on('scroll', function () {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > 0 && !loading) {
-            $('html, body').animate({
-                scrollTop: $("#body").offset().top
-            }, 100);
-            return;
-        }
-        if (scrollTop > $(window).height() && state) {
-            $('#loading').css({ display: 'none' })
-            state = false
-            AOS.refresh();
-        }
+    // $(document).on('scroll', function () {
+        // let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        // if (scrollTop > 0 && !loading) {
+        //     // $('html, body').animate({
+        //     //     scrollTop: $("#body").offset().top
+        //     // }, 100);
+        //     return;
+        // }
+        // if (scrollTop > $(window).height() && state) {
+        //     $('#loading').css({ display: 'none' })
+        //     state = false
+        // }
         
-    });
+    // });
 
     if ($(window).width() <= 768) {
         var swiper1 = new Swiper(".video2", {
