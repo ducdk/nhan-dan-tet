@@ -1,6 +1,6 @@
 AOS.init();
 
-let loading = false;
+let loading = true;
 let state = true;
 let play = false;
 var audio = new Audio('https://streaming-cms-nhandan.epicdn.me/b79609de11f901c522e091a62ba83bfa/65bf19d0/2024_02_03/tet_xuan_502.mp3');
@@ -8,6 +8,7 @@ var audio = new Audio('https://streaming-cms-nhandan.epicdn.me/b79609de11f901c52
 
 function clickStart() {
     console.log('Click');
+    if (loading) return;
     $('#loading').hide();
     loading = true;
     $('html, body').animate({
@@ -42,7 +43,8 @@ $(window).on('load', function () {
     // $('html, body').animate({
     //     scrollTop: $("#body").offset().top
     // }, 1000);
-
+    loading = false;
+    $('.text-loading').show();
     // $(document).on('scroll', function () {
         // let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         // if (scrollTop > 0 && !loading) {
