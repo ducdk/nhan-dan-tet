@@ -119,6 +119,11 @@
     height: 505px;
   }
 
+  .background6 {
+    background-image: url("../images/background6m.jpg");
+  }
+  
+
   .video1 {
     display: none !important;
   }
