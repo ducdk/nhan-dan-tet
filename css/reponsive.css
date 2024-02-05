@@ -3,6 +3,10 @@
     padding: 0 24px;
   }
 
+  .background {
+    background-image: url("../images/bgm.webp");
+  }
+
   .img-1 {
     width: 100px;
   }
