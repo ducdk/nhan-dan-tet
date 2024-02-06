@@ -10,6 +10,7 @@ function clickStart() {
     console.log('Click');
     if (loading) return;
     $('#loading').hide();
+    $('#loading').hide();
     loading = true;
     $('html, body').animate({
         scrollTop: $(".section-start").offset().top
@@ -45,6 +46,7 @@ $(window).on('load', function () {
     // }, 1000);
     loading = false;
     $('.text-loading').show();
+    $('.loading2').hide();
     // $(document).on('scroll', function () {
         // let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         // if (scrollTop > 0 && !loading) {
