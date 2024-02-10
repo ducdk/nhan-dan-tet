@@ -27,7 +27,7 @@
   }
 
   .background3 {
-    height: 700px;
+    height: 900px;
   }
 
   .image-chuc-tet {
@@ -52,6 +52,7 @@
   .background3 {
     background-image: url(../images/khung3.webp);
     margin: 16px;
+    max-height: unset!important;
   }
 
   .image-bai-viet {
@@ -75,9 +76,9 @@
     text-align: left;
     border-bottom: 1px solid #c84c10;
   }
-  .section-starting {
+  .section-start {
     min-height: 100vh;
-    height: 100%!important;
+    height: 1000px!important;
   }
   .section5 {
     min-height: 100vh;
@@ -98,6 +99,10 @@
   .section10 {
     min-height: 100vh;
     height: 850px;
+  }
+  .background2 {
+    max-height: 900px;
+    height: 900px;
   }
   .background5 {
     padding: 36px 0;
@@ -154,6 +159,7 @@
     height: unset;
     width: 90%;
     text-align: center;
+    padding:  0 24px;
   }
 
   .text-chuc-tet.qr {
